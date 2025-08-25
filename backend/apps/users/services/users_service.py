@@ -15,7 +15,7 @@ class UserService:
         user = self.model.objects.filter(id=user_id).values().first()
         if not user:
             raise ValidationError('user not found')
-        return Response({'user': user})
+        return user
 
     def register_user(self, dto):
         user_model = UserSigninDto(data=dto)
