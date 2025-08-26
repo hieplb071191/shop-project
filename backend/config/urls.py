@@ -25,6 +25,7 @@ from rest_framework_simplejwt.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('apps.users.urls')),
+    path('categories/', include('apps.categories.urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
 
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

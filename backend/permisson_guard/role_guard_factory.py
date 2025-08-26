@@ -1,4 +1,4 @@
-from backend.permisson_guard.role_guard import RoleGuard
+from permisson_guard.role_guard import RoleGuard
 
 def RoleGuardWith(required_role: list[str]):
     class _RoleGuard(RoleGuard):
